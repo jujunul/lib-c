@@ -6,7 +6,7 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 09:00:23 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/18 09:00:45 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/18 19:04:58 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t i;
 	
 	i = 0;
 	while (i < n)
-		s[i++] = '\0';
+		((char *)s)[i++] = '\0';
 }
 

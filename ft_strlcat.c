@@ -6,9 +6,10 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 18:36:14 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/18 08:14:52 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/19 10:42:31 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 unsigned int		ft_strlcat(char *dest, char *src, unsigned int size)

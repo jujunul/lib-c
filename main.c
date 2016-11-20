@@ -3,6 +3,6 @@
 int		main(void)
 {
   char *str = "salut tout le monde\n";
-  ft_putstr(str);
+  printf("%s\n", strchr(str, 82));
   return (0);
 }

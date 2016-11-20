@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/19 10:47:40 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/19 10:47:44 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/20 16:43:45 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/20 17:32:44 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putchar(char c)
+char		*ft_strtrim(char const *s)
 {
-	write(1, &c, 1);
+	int		i;
+	size_t	len;
+	
+	len = ft_strlen(s);
+	i = 0;
+	while (s[i] == ' ' || s[i] == ','|| s[i] == '\n' || s[i] == '\t')
+		i++;
+	while (s[j] == ' ' || s[j] == ','|| s[j] == '\n' || s[j] == '\t')
+		len--;
+	return (ft_strsub(s, i, (len - i)));
 }

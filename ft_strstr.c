@@ -6,9 +6,10 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/03 21:35:33 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/18 08:20:42 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/19 10:41:41 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char		*ft_strstr(char *str, char *to_find)

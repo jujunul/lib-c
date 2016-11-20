@@ -6,9 +6,10 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/01 15:12:03 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/18 08:10:19 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/19 10:48:00 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_atoi(char *str)

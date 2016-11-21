@@ -6,7 +6,7 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 13:00:03 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/19 15:49:34 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/21 20:14:52 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t i;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
 	while (i < n)
 	{
 		if (((char*)s1)[i] == ((char*)s2)[i])

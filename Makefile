@@ -6,7 +6,7 @@
 #    By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/12 11:39:42 by juthierr          #+#    #+#              #
-#    Updated: 2016/11/20 17:39:24 by juthierr         ###   ########.fr        #
+#    Updated: 2016/11/21 19:13:50 by juthierr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC = ft_putchar.c\
 	  ft_strncat.c\
 	  ft_strncmp.c\
 	  ft_strcpy.c\
+	  ft_strncpy.c\
 	  ft_strstr.c\
 	  ft_memcpy.c\
 	  ft_memccpy.c\
@@ -58,6 +59,17 @@ SRC = ft_putchar.c\
 	  ft_strsub.c\
 	  ft_strjoin.c\
 	  ft_strtrim.c\
+	  ft_itoa.c\
+	  ft_putendl.c\
+	  ft_putchar_fd.c\
+	  ft_putstr_fd.c\
+	  ft_putendl_fd.c\
+	  ft_lstnew.c\
+	  ft_lstdelone.c\
+	  ft_lstdel.c\
+	  ft_lstadd.c\
+	  ft_lstiter.c\
+	  ft_lstmap.c\
 
 OBJ = $(SRC:.c=.o)
 

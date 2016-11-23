@@ -6,7 +6,7 @@
 #    By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/12 11:39:42 by juthierr          #+#    #+#              #
-#    Updated: 2016/11/21 19:13:50 by juthierr         ###   ########.fr        #
+#    Updated: 2016/11/23 11:07:57 by juthierr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRC = ft_putchar.c\
 	  ft_strsub.c\
 	  ft_strjoin.c\
 	  ft_strtrim.c\
+	  ft_strsplit.c\
 	  ft_itoa.c\
 	  ft_putendl.c\
 	  ft_putchar_fd.c\

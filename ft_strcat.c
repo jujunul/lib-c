@@ -6,7 +6,7 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/03 23:20:59 by juthierr          #+#    #+#             */
-/*   Updated: 2016/09/10 17:15:25 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/22 16:04:35 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char		*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
-	while (src[i])
+	while (dest[i])
 		i++;
-	while (dest[j])
-		src[i++] = dest[j++];
-	src[i] = '\0';
-	return (src);
+	while (src[j])
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }

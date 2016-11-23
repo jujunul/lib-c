@@ -6,23 +6,27 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:12:19 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 11:57:06 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/23 12:10:58 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_nbstr(char *str, char c)
+int			ft_countstr(char const *s, char c)
 {
 	int i;
 	int nbstr;
 
 	i = 0;
-	nbstr = 1;
-	while (s[i])
+	nbstr = 0;
+	while(s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] != c)
+		{
+			while (s[i] && s[i] != c)
+				i++;
 			nbstr++;
+		}
 		i++;
 	}
 	return (nbstr);
@@ -30,29 +34,9 @@ int			ft_nbstr(char *str, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char	**tab;
-	int		lenstr;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	if (!(tab = (char **)malloc(sizeof(char *) * (ft_nbstr(s, c) + 1))))
-		return (NULL);
-	while (s[i])
+	if (s && c)
 	{
-		lenstr = 0;
-		while (s[i] != c && s[i])
-		{
-			lenstr++;
-			i++;
-		}
-		if (lenstr != 0)
-		{
-			tab[j] = ft_strsub(s, i, lenstr);
-			j++;
-		}
-		i++;
+	
 	}
-	return (tab);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 10:39:50 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 16:20:20 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/23 11:07:38 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int					ft_atoi(char *str);
 void				ft_putnbr(int nb);
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strcpy(char *dest, char *src);
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
-unsigned int		ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t				ft_strlcat(char *dest, char *src, size_t size);
+size_t				ft_strlcpy(char *dest, char *src, size_t size);
 char				*ft_strncat(char *dest, char *src, int nb);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(char *s1, char *s2, unsigned int n);
@@ -70,6 +70,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
+char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);

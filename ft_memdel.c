@@ -6,7 +6,7 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 13:02:51 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 11:39:40 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/22 18:15:01 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void		ft_memdel(void **ap)
 {
-	free(*ap);
-	ap = NULL;
+	if (ap && *ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

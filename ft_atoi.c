@@ -6,7 +6,7 @@
 /*   By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/01 15:12:03 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/19 10:48:00 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/22 18:08:43 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_atoi(char *str)
 	nbr = 0;
 	negative = 0;
 	i = 0;
-	while (str[i] < 14 && str[i] > 6)
+	while ((str[i] < 14 && str[i] > 6) || str[i] == 32)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

@@ -6,7 +6,7 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 13:13:05 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 11:39:57 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/22 18:27:05 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void		ft_strdel(char **as)
 {
-	free(*as);
-	as = NULL;
+	if (as && *as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

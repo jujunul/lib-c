@@ -6,7 +6,7 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 13:03:20 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 16:20:53 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/24 12:50:50 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void		ft_putstr_fd(char const *s, int fd)
 {
 	int i;
 
+	if (!s || !fd)
+		return ;
 	i = ft_strlen((char*)s);
 	write(fd, s, i);
 }

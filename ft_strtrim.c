@@ -6,28 +6,35 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 16:43:45 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/23 11:03:51 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/24 18:39:39 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
-	size_t	len;
+	int		len;
+	char	*str;
 
-	if (s)
-	{
-		len = (ft_strlen((char*)s) - 1);
-		i = 0;
-		while (s[i] == ' ' || s[i] == ',' || s[i] == '\n' || s[i] == '\t')
-			i++;
-		while (s[len] == ' ' || s[len] == ',' || s[len] == '\n' || s[len] == '\t')
-			len--;
-		if (s[i] == '\0')
-			return ((char *)&s[i]);
-		return (ft_strsub(s, i, (len - i + 1)));
-	}
-	return (NULL);
+	if (s == NULL)
+		return (NULL);
+	len = ft_strlen(s);
+	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
+		len--;
+	i = -1;
+	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		len--;
+	if (len <= 0)
+		len = 0;
+	str = (char*)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	s += i;
+	i = -1;
+	while (++i < len)
+		str[i] = *s++;
+	str[i] = '\0';
+	return (str);
 }

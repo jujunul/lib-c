@@ -6,7 +6,7 @@
 #    By: juthierr <juthierr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/12 11:39:42 by juthierr          #+#    #+#              #
-#    Updated: 2016/11/23 11:07:57 by juthierr         ###   ########.fr        #
+#    Updated: 2017/02/27 08:14:36 by juthierr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,12 +65,18 @@ SRC = ft_putchar.c\
 	  ft_putchar_fd.c\
 	  ft_putstr_fd.c\
 	  ft_putendl_fd.c\
+	  ft_putnbr_fd.c\
 	  ft_lstnew.c\
 	  ft_lstdelone.c\
 	  ft_lstdel.c\
 	  ft_lstadd.c\
 	  ft_lstiter.c\
 	  ft_lstmap.c\
+	  ft_putabstr.c\
+	  ft_islower.c\
+	  ft_isupper.c\
+	  ft_swap.c\
+	  ft_realloc.c\
 
 OBJ = $(SRC:.c=.o)
 
@@ -88,3 +94,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

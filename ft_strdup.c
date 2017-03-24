@@ -18,8 +18,9 @@ char		*ft_strdup(const char *s1)
 	char	*cp;
 
 	len = ft_strlen((char*)s1);
-	if (!(cp = malloc(sizeof(char) * len + 1)))
+	if (!(cp = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	ft_strcpy(cp, (char*)s1);
+	cp[len] = '\0';
 	return (cp);
 }

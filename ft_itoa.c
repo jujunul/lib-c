@@ -6,13 +6,13 @@
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 10:58:47 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/21 19:39:32 by juthierr         ###   ########.fr       */
+/*   Updated: 2016/11/24 17:52:21 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		nega(int *n, int *negative)
+static void		nega(int *n, int *negative)
 {
 	if (*n < 0)
 	{
@@ -21,7 +21,7 @@ void		nega(int *n, int *negative)
 	}
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		len;
 	int		tmp;
@@ -35,9 +35,9 @@ char		*ft_itoa(int n)
 	neg = 0;
 	while (tmp /= 10)
 		len++;
-	len += neg;
 	nega(&n, &neg);
-	if (!(str = (char*)malloc(sizeof(char) * len + 1)))
+	len += neg;
+	if (!(str = (char*)malloc(sizeof(char) * len)))
 		return (NULL);
 	str[--len] = '\0';
 	while (len--)

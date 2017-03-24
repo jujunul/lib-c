@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strjoinf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/21 11:59:50 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/24 12:44:20 by juthierr         ###   ########.fr       */
+/*   Created: 2017/02/27 06:47:03 by juthierr          #+#    #+#             */
+/*   Updated: 2017/03/24 17:53:24 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putendl(char const *s)
+char		*ft_strjoinf(char *s1, char *s2)
 {
-	int i;
+	char *new;
 
-	if (!s)
-		return ;
-	i = ft_strlen((char *)s);
-	write(1, s, i);
-	write(1, "\n", 1);
+	if (s1 && s2)
+	{
+		if (!(new = (char*)malloc(sizeof(char) * (ft_strlen(s1) +
+			ft_strlen(s2) + 1))))
+			return (NULL);
+		ft_strcpy(new, s1);
+		ft_strcat(new, s2);
+		free(s1);
+		free(s2);
+		return (new);
+	}
+	return (NULL);
 }

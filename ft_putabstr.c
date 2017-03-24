@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putabstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/21 11:59:50 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/24 12:44:20 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/25 14:51:26 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/25 15:01:41 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putendl(char const *s)
+void		ft_putabstr(char **tab)
 {
 	int i;
 
-	if (!s)
-		return ;
-	i = ft_strlen((char *)s);
-	write(1, s, i);
-	write(1, "\n", 1);
+	i = -1;
+	while (tab[++i])
+		ft_putstr(tab[i]);
 }

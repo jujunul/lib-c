@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juthierr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/21 11:59:50 by juthierr          #+#    #+#             */
-/*   Updated: 2016/11/24 12:44:20 by juthierr         ###   ########.fr       */
+/*   Created: 2016/11/25 15:00:03 by juthierr          #+#    #+#             */
+/*   Updated: 2016/11/25 15:01:06 by juthierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putendl(char const *s)
+int		ft_isupper(int c)
 {
-	int i;
-
-	if (!s)
-		return ;
-	i = ft_strlen((char *)s);
-	write(1, s, i);
-	write(1, "\n", 1);
+	return ((65 <= c && c <= 90) ? 1 : 0);
 }
